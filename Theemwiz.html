@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agency Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      background-color: #FDF0E9;
+      color: #52241d;
+      font-family: 'Epilogue', sans-serif;
+    }
+
+    /* Header & Nav */
+    .nav-link, .navbar-brand {
+      color: white !important;
+    } 
+    .btn-custom {
+      background-color: #F15A3D;
+      color: white;
+      border: none;
+    }
+    .btn-custom:hover {
+      background-color: #d94f34;
+    }
+    .highlight-text {
+      color: #F15A3D;
+      letter-spacing: 1px;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+    .hero-img {
+      max-width: 100%;
+      border-radius: 1rem;
+    }
+    .rounded-bg {
+      border-radius: 30px;
+      padding: 1rem;
+    }
+
+    .btn-fixed-size {
+    width: 138px;
+    height: 48px;
+    font-size: 14px;
+  }
+
+  /* end */
+
+  /* about */
+
+  .custom-box {
+      background-color: #fff3ed;
+      padding: 40px 20px 0 20px;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .line-divider {
+      border-top: 1px solid #d8b9a5;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .btn-outline-dark-custom {
+      background-color: white;
+      border: 1px solid #ddd;
+      padding: 10px 24px;
+      font-size: 14px;
+      font-weight: 800;
+      font-family:'Epilogue', sans-serif;
+      color: #000;
+      border-radius: 6px;
+    }
+
+    .custom-heading{
+      color: #391400; 
+      font-family:'Epilogue', sans-serif; 
+      font-weight: 800;
+    }
+
+    .hover-shadow:hover {
+    box-shadow: 0 0 15px 0 #F3D1BF;
+    transition: 0.3s ease-in-out;
+  }
+
+
+  @media (min-width: 992px) {
+  .pt-lg-125 {
+    padding-top: 125px;
+  }
+
+  .pe-lg-226 {
+    padding-right: 226px;
+  }
+}
+/* end */
+
+/* Portfolio */
+.portfolio-header {
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .portfolio-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .portfolio-header p {
+            color: #ff6347;
+            font-size: 1.2rem;
+        }
+        .filter-options {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .filter-options a {
+            color: #ffffffa3;
+            margin: 0 1rem;
+            text-decoration: none;
+            
+        }
+        .filter-options a:hover {
+                color: white;
+        }
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.5rem;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .portfolio-item .label {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            text-align: center;
+            padding: 40px;
+        }
+        .portfolio-item .label .design {
+            
+            background-color: white;
+            border-radius: 50px;
+            display: inline-block;
+            color: black;
+        }
+        .portfolio-item .label .sofa {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            margin-top: 10px;
+        }
+        .explore-more {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        .explore-more button {
+            border: 1px solid #ffffffa3;
+            padding: 0.75rem 1.5rem;
+            color: #fff;
+            font-size: 1rem;
+            border-radius: 0.5rem;
+        }
+            
+        .explore-more button:hover{
+            background-color: #ffffffa3 ;
+        }
+
+        @media (max-width: 768px) {
+    .portfolio-header h1 {
+        font-size: 1.8rem;
+    }
+    .portfolio-header p {
+        font-size: 1rem;
+    }
+    .filter-options {
+        text-align: center;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: center;
+    }
+    .portfolio-item .label {
+        padding: 15px;
+        text-align: center;
+    }
+    .portfolio-item .label .sofa {
+        font-size: 1.8rem;
+    }
+    .explore-more button {
+        font-size: 0.9rem;
+        padding: 0.6rem 1rem;
+    }
+}
+/* end */  
+        
+/* Contact us */
+
+.map-background {
+      background-image: url('./ASSETS/map.png'); /* Replace with actual image path */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    .contact-form-overlay {
+      position: absolute;
+      top: 50%;
+      left: 3rem;
+      transform: translateY(-50%);
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width: 350px;
+      z-index: 3;
+      margin-left: 5rem;
+    }
+
+    .marker-icon {
+      position: absolute;
+      top: 55%;
+      left: 62%;
+      transform: translate(-50%, -50%);
+      font-size: 3rem;
+      color: #e74c3c;
+      z-index: 2;
+    }
+
+    .submit-btn {
+      background-color: #f46b4e;
+      border: none;
+    }
+
+    .submit-btn:hover {
+      background-color: #e65b3d;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 768px) {
+      .map-background {
+        height: 300px;
+        position: relative;
+      }
+
+      .contact-form-overlay {
+        position: static;
+        transform: none;
+        margin: 2rem auto 1rem;
+        width: 95%;
+        max-width: 100%;
+        box-shadow: none;
+        padding: 1.5rem;
+        
+      }
+
+      .marker-icon {
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2.5rem;
+      }
+    }
+/* end */
+
+
+/* Footer */
+@media (max-width: 576px) {
+  .marg-0{
+    margin-top: 0 !important;
+  }
+}
+  .social-icon {
+      width: 40px;
+      height: 40px;
+      background-color: #EF6D58;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.2rem;
+      transition: 0.3s ease;
+    }
+      
+  .social-icon:hover {
+      background-color: white;
+      text-decoration: none;
+    }
+      
+  a {
+      transition: color 0.3s;
+    }
+      
+  a:hover {
+      color: #d45744 ;     
+    }
+
+   
+        /* end */ 
+
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+ <div style="background-color: #1E1B2E;
+      color: white;">
+<nav class="navbar navbar-expand-lg">
+  <div class="container py-3">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="./ASSETS/logo.png" alt="Logo" class="me-2">
+    </a>
+    <button class="navbar-toggler bg-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse w-100 text-center" id="navbarNav">
+        <ul class="navbar-nav d-flex justify-content-evenly align-items-center w-100 ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        </ul>
+      <button class="btn btn-outline-light align-items-center" href="#" style="width: 138px; height: 48px;">
+        <strong>Contact</strong>
+      </button>
+    </div>
+  </div>
+</nav>
+
+
+<section class="py-3">
+  <div class="container">
+    <div class="row align-items-center text-center text-lg-start">
+      <div class="col-lg-6 mb-5 mb-lg-0 order-2 order-lg-1 text-start">
+        <p class="highlight-text">MODERN STUDIO</p>
+          <h1 class="display-4 fw-bold">
+          We’re Help <br>
+          To Build Your <br>
+          Dream Project
+        </h1>
+        <p class="mt-5 text-light" style="color: #fffffc64 !important;">Agency provides a full service range including technical<br> skills, design, business understanding.</p>
+        <div class="mt-4 d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+            <a href="#" class="btn btn-custom btn-fixed-size d-inline-flex justify-content-center align-items-center font-weight-bold">
+                HOW WE WORK
+              </a>
+          <a href="#" class="btn text-white">Contact Us</a>   <!--btn-link -->
+        </div>
+
+        
+        <div class="d-flex align-items-center mt-5">
+          <img src="./Assets/Bitmap.png" alt="Avatar" width="48" height="48" class="rounded-circle me-3" style="background-color: #B550F6;">
+          <div>
+            <p class="mb-0" style="color: #fffffc64">"Put themselves in the merchant’s shoes"</p>
+            <small>Meta Inc.</small>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 position-relative order-1 order-lg-2">
+        <div class="d-flex justify-content-center align-items-center gap-4 flex-wrap">
+          <img src="./ASSETS/pic.png" alt="Laptop" class="hero-img" style="border-radius: 1rem;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- *About -->
+<section class="pt-5 pb-0 pb-sm-5">
+  <div class="container">
+    <!-- Top logos row -->
+    <div class="row text-center justify-content-center mb-4">
+      <img src="./Assets/logo1.png" alt="Companies" class="mb-3">
+    </div>
+
+    <div class="line-divider"></div>
+
+    <!-- Content Section -->
+  <div class="container">
+  <div class="row align-items-center">
+    
+    <!-- Left Side Image/Graphics -->
+    <div class="col-lg-6 text-center mb-5 mb-lg-0 order-1 order-lg-1">
+      <div class="custom-box">
+        <img src="./ASSETS/pic1.png" alt="Design Card" class="img-fluid mb-3">
+      </div>
+    </div>
+
+    <!-- Right Side Text -->
+    <div class="col-lg-6 text-sm-center text-lg-start order-2 order-lg-2 text-sm-start px-3 px-sm-0 ps-lg-5">
+      <p class="text-uppercase small mb-2" style="color: #EF6D58;">About</p>
+      <h2 class="display-6 custom-heading">An Experience<br>Design Agency</h2>
+      <p class="fw-bold mt-4 mb-4">Provides a full service range</p>
+      <p class="text-muted small lh-lg pe-lg-226">
+        Ability to put themselves in the merchant’s shoes. It is
+        meant to partner on the long run, and work as an extension
+        of the merchant’s team.
+      </p>
+      <a href="#" class="btn btn-outline-dark-custom mt-3">ABOUT US</a>
+    </div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Banner-1 -->
+  <div class="py-5 pb-lg-0 mx-4 mx-sm-0" style="background-color: #FFF1EC;">
+    <div class="container">
+      <div class="row text-start overflow-hidden " style="background-color: #FFF1EC;">
+
+        <!-- Column 1 -->
+        <div class="col-md-4 py-4 ps-5 border border-lg-bottom border-lg-end-0 border-sm-bottom-0 hover-shadow" style="border-color: #F3D1BF !important">
+          <h3 class="fw-bold fs-1 mb-1" style="color: #3A1D12;">42%</h3>
+          <p class="mb-0 fs-5" style="color: #3A1D12;">Years of experience</p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-md-4 py-4 ps-5 border border-sm-bottom-0 border-lg-bottom border-lg-end-0 hover-shadow" style="border-color: #F3D1BF !important;">
+          <h3 class="fw-bold fs-1 mb-1" style="color: #3A1D12;">73+</h3>
+          <p class="mb-0 fs-5" style="color: #3A1D12;">Agency members</p>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col-md-4 py-4 ps-5 border hover-shadow" style="border-color: #F3D1BF !important;">
+          <h3 class="fw-bold fs-1 mb-1" style="color: #3A1D12;">5.000</h3>
+          <p class="mb-0 fs-5" style="color: #3A1D12;">Projects complete</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- HOW WE WORK SECTION -->
+  <div class="pb-5" style="background-color: #FDEFE8;">
+  <div class="container px-3 px-md-0">
+    <div class="row align-items-center">
+      <!-- Left Column -->
+      <div class="col-lg-6 mb-4 mb-md-0">
+        <p class="text-uppercase fw-semibold mb-2" style="color: #E17C6D; letter-spacing: 1px;">How We Work</p>
+        <h2 class="fw-bold display-5 mb-3" style="color: #3A1D12;">Making Your Projects <br> Look Awesome</h2>
+        <p class="text-muted mb-4 pe-lg-226">
+          Technical skills, design, business understanding, ability to put themselves in the merchant's shoes.
+        </p>
+        <a href="#" class="text-decoration-none fw-semibold" style="color: #3A1D12;">Read More</a>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-lg-6 pt-0 pt-sm-0 pt-lg-5"> 
+        <!-- Item 1 -->
+        <div class="d-flex flex-sm-row align-items-center mb-4 text-start pt-lg-125">
+          <h3 class="fw-bold mb-2 mb-sm-0 me-sm-3" style="font-size: 65px; color: #3A1D12;">1</h3>
+          <p class="mb-0 fw-bold text-center text-sm-start" style="color: #3A1D12; font-size: 1.5rem;">
+            Full service range including
+          </p>
+        </div>
+      
+        <!-- Item 2 -->
+        <div class="d-flex flex-sm-row align-items-center mb-4 text-start">
+          <h3 class="fw-bold mb-2 mb-sm-0 me-sm-3" style="font-size: 65px; color: #3A1D12;">2</h3>
+          <p class="mb-0 fw-bold text-center text-sm-start" style="color: #3A1D12; font-size: 1.5rem;">
+            Technical skills, design, business
+          </p>
+        </div>
+      
+        <!-- Item 3 -->
+        <div class="d-flex flex-sm-row align-items-center text-start">
+          <h3 class="fw-bold mb-2 mb-sm-0 me-sm-3" style="font-size: 65px; color: #3A1D12;">3</h3>
+          <p class="mb-0 fw-bold text-center text-sm-start" style="color: #3A1D12; font-size: 1.5rem;">
+            Themselves in the merchant's
+          </p>
+        </div>
+      </div>
+      
+      <div class="line-divider"></div>
+  </div>
+  </div>
+  </div>
+
+  <!-- Video Reel -->
+  <div class="container py-0 py-sm-5" style="background-color: #FFF1EC;">
+  <div class="row align-items-center">
+    
+    <!-- Left: Video -->
+    <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+      <div class="position-relative d-inline-block rounded overflow-hidden" style="max-width: 100%;">
+        <video class="w-100 rounded" poster="./ASSETS/Bitmap2.png">
+          <source src="#" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <a href="#" class="position-absolute top-50 start-50 translate-middle text-white text-decoration-none">
+          <i class="bi bi-play-circle-fill" style="font-size: 4rem;"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: Text -->
+    <div class="col-lg-6 text-start text-lg-start">
+      <p class="text-uppercase fw-bold small mb-3" style="color: #EF6D58;">Video Reel</p>
+      <h2 class="fw-bold display-6" style="color: #3A1D12;">Unlock The Greatest<br>Value Possible</h2>
+      <p class="text-muted mt-4">
+        Design, business understanding, ability to put themselves
+        in the merchant’s shoes meant to partner.
+      </p>
+    </div>
+
+  </div>
+  </div>
+</section>
+
+
+<!-- Portflio  -->
+<div class=" pb-5 btn-custom px-5" style="background-color: #1a1a2e;">
+  <div class="portfolio-header">
+      <p>PORTFOLIO</p>
+      <h1>Latest Work</h1>
+  </div>
+  <div class="filter-options d-none d-lg-flex justify-content-center">
+      <a href="#">Show All<sup class="position-relative" style="top: -11px;">14</sup></a>
+      <a href="#">Design <sup class="position-relative" style="top: -11px;">6</sup></a>
+      <a href="#">Branding <sup class="position-relative" style="top: -11px;">4</sup></a>
+      <a href="#">Illustration <sup class="position-relative" style="top: -11px;">3</sup></a>
+      <a href="#">Motion <sup class="position-relative" style="top: -11px;">1</sup></a>
+  </div>
+
+  <!-- Dropdown for Small Screens -->
+<div class="dropdown d-block d-lg-none text-center pb-2 ">
+<button class="btn btn-light w-100 py-2 d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown">
+  Show All
+  <i class="bi bi-chevron-down"></i>
+</button>
+<ul class="dropdown-menu dropdown-menu-end w-100">
+  <li><a class="dropdown-item" href="#">Design (6)</a></li>
+  <li><a class="dropdown-item" href="#">Branding (4)</a></li>
+  <li><a class="dropdown-item" href="#">Illustration (3)</a></li>
+  <li><a class="dropdown-item" href="#">Motion (1)</a></li>
+</ul>
+</div>
+
+  <div class="row g-4">
+      <div class="col-sm-12 col-lg-5">
+          <div class="portfolio-item">
+              <img src="./ASSETS/Bitmap3.png" alt="SOFA">
+              <div class="label text-start">
+                  <div class="design px-4 py-2">Design</div>
+                  <div class="sofa">SOFA</div>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-12 col-lg-7">
+          <div class="portfolio-item">
+              <img src="./ASSETS/Bitmap4.png" alt="KeyBoard">
+              <div class="label text-start">
+                  <div class="design px-4 py-2">Branding</div>
+                  <div class="sofa">KeyBoard</div>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-12 col-lg-7">
+          <div class="portfolio-item">
+              <img src="./ASSETS/Bitmap5.png" alt="Work Media">
+              <div class="label text-start">
+                  <div class="design px-4 py-2">Illustration</div>
+                  <div class="sofa">Work Media</div>
+              </div>
+          </div>
+      </div>
+      <div class="col-sm-12 col-lg-5">
+          <div class="portfolio-item">
+              <img src="./ASSETS/Bitmap6.png" alt="DDDone">
+              <div class="label text-start">
+                  <div class="design px-4 py-2">Motion</div>
+                  <div class="sofa">DDDone</div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="explore-more">
+      <button class="btn btn-lg">EXPLORE MORE</button>
+  </div>
+</div>
+
+
+<!-- contact form start -->
+ <!-- Mobile-first: Contact form first -->
+ <div class="d-block d-sm-none px-3">
+  <div class="contact-form-overlay">
+    <h4 class="fw-bold mb-3">Get In Touch</h4>
+    <form>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Your email" required />
+      </div>
+      <div class="mb-3">
+        <select class="form-select" required>
+          <option selected disabled>Subject</option>
+          <option value="1">General</option>
+          <option value="2">Support</option>
+          <option value="3">Feedback</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
+      </div>
+      <button type="submit" class="btn text-white submit-btn w-100">SUBMIT NOW</button>
+    </form>
+  </div>
+</div>
+
+<!-- Map with overlay for desktop and mobile marker -->
+<div class="map-background d-block position-relative">
+  <!-- Contact form for desktop -->
+  <div class="contact-form-overlay d-none d-sm-block">
+    <h4 class="fw-bold mb-3">Get In Touch</h4>
+    <form>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Your email" required/>
+      </div>
+      <div class="mb-3">
+          <select class="form-select" required>
+            <option selected disabled>Subject</option>
+            <option value="1">General</option>
+            <option value="2">Support</option>
+            <option value="3">Feedback</option>
+          </select>
+        </div>
+      <div class="mb-3">
+        <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
+      </div>
+      <button type="submit" class="btn text-white submit-btn w-100">SUBMIT NOW</button>
+    </form>
+  </div>
+
+  <!-- Marker icon for all screen sizes -->
+  <div class="marker-icon">
+    <i class="bi bi-geo-alt-fill"></i>
+  </div>
+</div>
+
+<!-- contact form end -->
+
+ <!-- Footer -->
+ <div class="text-dark pt-5 pb-3">
+  <div class="container">
+    <div class="row text-center text-lg-start">
+
+      <!-- Logo/Agency -->
+      <div class="col-lg-3 mb-4">
+        <h5 class="fw-bolder text-dark">Agency</h5>
+      </div>
+
+      <!-- Menu -->
+      <div class="col-lg-3 mb-4">
+        <h6 class="text-uppercase small mb-2 footer-hover" style="color: #EF6D58;">Menu</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none text-dark">About</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Services</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Blog</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Service -->
+      <div class="col-lg-3 mb-4">
+        <h6 class="text-uppercase small mb-2" style="color: #EF6D58;">Service</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none text-dark">Design</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Development</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Marketing</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">See More</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="col-lg-3 d-flex align-items-center justify-content-lg-end justify-content-center gap-3 marg-0" style="margin-top: -140px;">
+        <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+      </div>
+      
+    </div>
+    <div class="line-divider"></div>
+
+    <!-- Bottom Row -->
+    <div class="row text-center text-lg-between small">
+      <div class="col-lg-6 mb-2 mb-lg-0">
+        <span>Copyright © 2022 Laaqiq. All Rights Reserved.</span>
+      </div>
+      <div class="col-lg-6 text-lg-end">
+        <a href="#" class="text-decoration-none text-dark me-5">Terms of Use</a>
+        <a href="#" class="text-decoration-none text-dark">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
